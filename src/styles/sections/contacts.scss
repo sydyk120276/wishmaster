@@ -1,0 +1,160 @@
+.contacts {
+    &-map {
+      position: relative;
+      
+      @include m-b-laptop-down {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &-map iframe {
+      order: 2;
+      border-radius: 12px;
+    }
+    &__list {
+      @extend .list-reset;
+      position: absolute;
+      top: 20px;
+      left: 80px;
+      width: 100%;
+      max-width: 470px;
+      height: 100%;
+      min-height: 550px;
+      max-height: 650px;
+
+      @include m-b-laptop-down {
+        position: static;
+        order: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      @include m-b-mobile-lg-down {
+        grid-template-columns: 1fr;
+        grid-row-gap: 25px;
+      }
+    }
+    &__list-item {
+      @extend .flex-column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    &__list-item p {
+      margin: 0;
+      font-size: 20px;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: 6fr 4fr;
+      grid-gap: 2vw;
+
+        @include m-b-laptop-down {
+            grid-template-columns: 1fr;
+          }
+    }
+    &__grid-alt {
+      display: grid;
+      grid-template-columns: 4fr 6fr;
+      grid-gap: 2vw;
+
+        @include m-b-laptop-down {
+            grid-template-columns: 1fr;
+          }
+    }
+    &__grid-side {
+      min-height: 300px;
+
+    }
+
+    &__images {
+      background-image: url(../../assets/img/contacts/fon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1vw;
+
+      @include m-b-laptop-down {
+        order: 2;
+      }
+      @include m-b-mobile-lg-down {
+        grid-template-columns: 1fr;
+        background-image: none;
+      }
+    }
+    &__images img {
+      @include m-b-mobile-lg-down {
+        width: 100%;
+      }
+    }
+
+   &__images-item {
+    @include m-b-mobile-lg-down {
+      display: none;
+    }
+   }
+
+   &-social-block {
+    justify-content: flex-start;
+   } 
+   &-social {
+    margin-bottom: 7px;
+    display: flex;
+    gap: 5px;
+   }
+   &-social a {
+    @extend .hover-opacity;
+   }
+
+    &-item-content-img {
+      justify-content: space-between;
+    }
+    &__desc {
+      margin: 0;
+      color: var(--alt-black);
+    }
+
+    &__desc a {
+      @extend .hover-opacity;
+    }
+
+    &__desc-alt {
+      font-size: 18px;
+    }
+
+    &__desc:not(:last-child)  {
+      margin-bottom: 12px;
+    }
+
+    &__link {
+      @extend .hover-opacity;
+      margin-top: 12px;
+      background: var(--primary);
+      color: var(--white);
+
+      @include m-b-laptop-down {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+      }
+    }
+
+    &-phones {
+      @extend .flex-column;
+    }
+    &-mail {
+      @extend .flex-column;
+      gap: 10px;
+    }
+    &-mail {
+      @extend .flex-column;
+      gap: 7px;
+    }
+    &-mail span {
+      color: rgba(22, 53, 96, 0.60);
+      font-size: 12px;
+    }
+}

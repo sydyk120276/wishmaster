@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  border-radius: 0;
+
+  @extend .main-scroll;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--base-font, sans-serif);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--base-text-color);
+  background-color: var(--main-bg-color);
+
+  &.body-locked {
+    overflow: hidden;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}

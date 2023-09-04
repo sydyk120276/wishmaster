@@ -1,0 +1,24 @@
+.payment {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2vw;
+  
+          @include m-b-laptop-down {
+              grid-template-columns: 1fr;
+            }
+      }
+      &-item-content-img {
+        @include m-b-tablet-down {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+      }
+      &-item-content-img img {
+        @include m-b-mobile-lg-down {
+            width: 79px;
+            height: 79px;
+          }
+      }
+}

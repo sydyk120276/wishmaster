@@ -1,0 +1,210 @@
+.lw {
+  &-container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+  }
+
+  &-container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-fluid-width);
+  }
+
+  &-alt-color-wrapper {
+    padding: 25px ;
+    background-color: var(--white);
+    border-radius: var(--base-border-radius);
+    margin-bottom: 20px;
+  }
+
+  &-section {
+    margin-bottom: 48px;
+  }
+
+  &-section-header {
+    @extend .flex-wrap;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .lw-section-title {
+      margin-bottom: 0;
+    }
+  }
+
+  &-section-title {
+    display: inline-block;
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 24px;
+    margin-right: 18px;
+    color: var(--secondary);
+  }
+
+  &-main-title {
+    font-family: var(--secondary-font);
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.31px;
+    margin: 0;
+    color: var(--white);
+  }
+
+  // new
+
+  &-breadcrumbs {
+    @extend .flex-wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    a {
+      @extend .hover-opacity;
+      position: relative;
+      color: var(--breadcrumbs-color);
+      margin: 0 20px 0 10px;
+    }
+    a:first-child {
+      margin-left: 0;
+      @include m-b-tablet-down {
+        margin-left: 10px;
+      }
+    }
+    a:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: -20px;
+      width: 11px;
+      height: 10px;
+      background-image: url(../assets/img/delivery/arrow_nav.png);
+      background-size: cover;
+    }
+    p {
+      margin: 0 0 0 10px;
+      color: var(--breadcrumbs-color);
+    }
+  }
+
+  &-page-title {
+    font-family: var(--secondary-font);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.36px;
+    color: var(--secondary);
+    margin: 0
+  }
+
+  &-title-sm {
+    color: var(--secondary);
+    font-family: var(--secondary-font);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+  &-title-sm--white {
+    color: var(--white);
+
+    @include m-b-laptop-down {
+      color: var(--primary);
+    }
+  }
+  &-title-sm--primary {
+    color: var(--primary);
+  }
+
+  &-side-primary {
+    background-color: var(--primary);
+  }
+  &-side-light {
+    background-color: var(--light);
+
+    @include m-b-laptop-down {
+      background-color: var(--white);
+    }
+  }
+
+  &-item-content-img {
+    @extend .flex-centered-content;
+    gap: 1vw;
+
+    @include m-b-laptop-down {
+      justify-content: flex-start;
+    }
+    @include m-b-mobile-lg-down {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &-item-content-img-alt {
+    @extend .flex-column;
+    align-items: flex-start;
+  }
+
+  &-item-desc-block {
+    @extend .flex-column;
+    margin-bottom: 12px;
+  }
+
+  // &-item-desc-block:last-child {
+  //   @include m-b-mobile-lg-down {
+  //     display: none;
+  // }
+  // }
+
+  &-desc-white {
+    margin: 0;
+    color: var(--white);
+  }
+  
+  &-desc-primary {
+    margin: 0;
+    color: var(--primary);
+  }
+
+  //
+
+  &-base-link {
+    font-family: var(--secondary-font);
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration-line: underline;
+
+    color: var(--secondary);
+    @extend .hover-opacity;
+  }
+
+  &-main-btn {
+    @extend .btn-default;
+    @extend .flex-centered-content;
+
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    width: 100%;
+    max-width: fit-content;
+    min-height: 32px;
+    text-align: center;
+    padding: 11px 10px 10px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: var(--white);
+    @extend .main-btn-hover;
+
+    &--outlined {
+      border-color: var(--primary);
+      background-color: transparent;
+      color: var(--primary);
+      @extend .main-btn-outlined-hover;
+    }
+  }
+
+}

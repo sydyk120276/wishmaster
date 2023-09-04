@@ -1,0 +1,44 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+
+:root {
+    // base
+    --base-font: "Roboto", sans-serif;
+    --secondary-font: "RobotoCondensed", sans-serif;
+
+    --content-width: 1630px;
+    --content-fluid-width: 1800px;
+    --content-fluid-offset: 60px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-fluid-offset) * 2));
+
+    // colors
+    --white: #ffffff;
+    --black: #000000;
+
+    --primary: #175cff;
+    --secondary: #163560;
+
+    --success: #f58128;
+    --info: #8794ba;
+    --warning: #675a14;
+    --danger: #ff693b;;
+    --light: #f6f9fc;
+
+    --gray-6: #505050;
+    --alt-black: #333333;
+
+    --breadcrumbs-color: var(--gray-6);
+
+    --base-text-color: #121212;
+    --main-bg-color: var(--light);
+    --main-transition: .25s ease-in;
+
+    --base-border-radius: 12px;
+
+    // scrollbar
+    --main-scrollbar-width: 8px;
+    --main-scrollbar-color: var(--main-bg-color);
+    --main-scrollbar-thumb-color: var(--primary);
+  }

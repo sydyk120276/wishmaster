@@ -1,0 +1,60 @@
+{
+  "name": "wishmaster.me",
+  "version": "1.0.0",
+  "description": "gulp builder",
+  "main": "gulpfile.js",
+  "@vue/compiler-sfc": "file:node_modules/vue/compiler-sfc",
+  "scripts": {
+    "start": "start",
+    "build": "build",
+    "buildMinAll": "buildMinAll",
+    "w3c": "node-w3c-validator -f lint -evH -i app/**/*.html",
+    "test": "editorconfig-checker"
+  },
+  "author": "yuriybevov@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "editorconfig-checker": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-webp": "^4.0.1",
+    "node-w3c-validator": "^2.0.2",
+    "sass": "^1.49.11",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "webpack": "^5.71.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^8.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriyBevov/crmanalytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YuriyBevov/crmanalytics/issues"
+  },
+  "homepage": "https://github.com/YuriyBevov/crmanalytics#readme"
+}

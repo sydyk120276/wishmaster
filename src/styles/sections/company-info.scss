@@ -1,0 +1,42 @@
+.company-info {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-gap: 2vw;
+
+    @include m-b-tablet-down {
+      grid-template-columns: 1fr;
+    }
+
+    & > img {
+      min-height: 635px;
+      border-radius: var(--base-border-radius);
+
+      /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+      @include m-b-down(1720px) {
+        min-height: initial;
+      }
+    }
+  }
+
+
+
+  &__content {
+    @extend .flex-column;
+    justify-content: center;
+    padding: 0 20px;
+
+    @include m-b-tablet-down {
+      padding: 20px 0;
+    }
+
+    img {
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 12px;
+    }
+  }
+}

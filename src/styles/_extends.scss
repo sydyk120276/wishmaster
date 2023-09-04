@@ -1,0 +1,132 @@
+/* flex*/
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*text*/
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*scroll*/
+.main-scroll {
+  &::-webkit-scrollbar {
+      background-color: var(--main-scrollbar-color);
+      width: var(--main-scrollbar-width);
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: var(--main-scrollbar-thumb-color);
+  }
+}
+
+/*resets*/
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.btn-default {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+/*elements*/
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+/*transitions*/
+.hover-opacity {
+  transition: opacity var(--main-transition);
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.main-btn-hover {
+  transition: background-color var(--main-transition), border-color var(--main-transition), color var(--main-transition);
+
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      border-color: var(--primary);
+      background-color: transparent;
+      color: var(--primary);
+    }
+  }
+}
+
+.main-btn-outlined-hover {
+  transition: background-color var(--main-transition), border-color var(--main-transition), color var(--main-transition);
+
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+}
+
+.section-inner-offset {
+  padding: 25px !important;
+}
+
+.section-white-theme {
+  background-color: var(--white) !important;
+}
+
+.section-border {
+  border-radius: 12px !important;
+}

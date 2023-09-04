@@ -1,0 +1,24 @@
+/* Базовые подключения */
+@import "vendor";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "global";
+@import "extends";
+@import "common";
+
+/* Компоненты */
+
+/* Секции */
+
+@import "./sections/catalog-preview";
+@import "./sections/company-info";
+@import "./sections/delivery";
+@import "./sections/guaranty";
+@import "./sections/about";
+@import "./sections/payment";
+@import "./sections/contacts";
+
+/* Модальные окна */
+
+
